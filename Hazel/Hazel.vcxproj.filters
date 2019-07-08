@@ -1,33 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Hazel">
-      <UniqueIdentifier>{e80f35de-2945-4838-ba7b-9ddba50ca4d0}</UniqueIdentifier>
+    <Filter Include="include">
+      <UniqueIdentifier>{89AF369E-F58E-B539-FEA6-40106A051C9B}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Hazel\include">
-      <UniqueIdentifier>{bb671b99-1c7f-41f2-9ba3-dcf0a50bf90c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Hazel\src">
-      <UniqueIdentifier>{b52ff31b-12ab-43ac-a903-37b8530a6458}</UniqueIdentifier>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Application.h">
-      <Filter>Hazel\include</Filter>
+      <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\Core.h">
-      <Filter>Hazel\include</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Hazel.h">
-      <Filter>Hazel\include</Filter>
+      <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\EntryPoint.h">
-      <Filter>Hazel\include</Filter>
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hazel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Log.h">
+      <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp">
-      <Filter>Hazel\src</Filter>
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Log.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
