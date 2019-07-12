@@ -21,7 +21,7 @@ namespace Hazel {
 	class HAZEL_API Window
 	{
 	public:
-		using EventCallBackFn = std::function<void(Event&)>;
+		using EventCallBackFn = std::function<void(Event&)>;	//function object takes event class reference as a parameter
 
 		virtual ~Window() {}
 

@@ -4,9 +4,10 @@
 
 #include "GLFW\glfw3.h"
 
+
 namespace Hazel {
 
-	class WindowsWindow : public Window
+	class WindowsWindow : public Window	//window includes Event class
 	{
 	public:
 		WindowsWindow(const WindowProps& props);
@@ -18,7 +19,7 @@ namespace Hazel {
 		inline unsigned int GetHeight() const override { return m_Data.Height; }
 
 		//Window attributes
-		inline void SetEventCallback(const EventCallBackFn& callback) override { m_Data.EventCallBack = callback; }
+		void SetEventCallback(const EventCallBackFn& callback) override { m_Data.EventCallBack = callback; }	//function object seems to contain call to OnEvent function
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
 	private:
@@ -34,6 +35,15 @@ namespace Hazel {
 			bool VSync;
 
 			EventCallBackFn EventCallBack;
+			//The structure probably looks as follows:
+			//EventCallBack(Event& event)
+			//{
+			//	Application* app(this)->OnEvent(event); --might be any event such as windowresize or mousescroll--
+			//}	-- event object is probably the placeholder in Application bind
+			//void CallBack(WindowsWindow* wind, Event& event)
+			//{
+			//	wind->
+			//}
 
 		};
 
